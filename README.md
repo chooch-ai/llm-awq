@@ -48,8 +48,9 @@ cd llm-awq
 ```
 conda create -n awq python=3.10 -y
 conda activate awq
-pip install --upgrade pip  # enable PEP 660 support
-pip install -e .
+conda install pytorch  pytorch-cuda=11.8 -c pytorch -c nvidia
+#python -m pip install --upgrade pip  # enable PEP 660 support
+python -m pip install -e .
 ```
 
 * For **edge devices** like Orin, before running the commands above, please:
